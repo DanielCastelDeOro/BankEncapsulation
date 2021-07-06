@@ -22,7 +22,7 @@ namespace BankEncapsulation
            
             if (anwser.ToUpper() == "Yes".ToUpper()) 
             {
-                Console.WriteLine("Okay, what do you want to do? please type 'Transaction' or 'No'");
+                Console.WriteLine("Okay, what do you want to do? please type 'Transaction' or 'Exit'");
                 var responseToWhatToDo = Console.ReadLine();
                 if (responseToWhatToDo.ToUpper() == "Transaction".ToUpper())
                 {
@@ -33,7 +33,14 @@ namespace BankEncapsulation
                     double userBalance1 = bA.GetBalance();
 
                     Console.WriteLine($"Your balance is {userBalance1 + userBalance,0:c}");
+
                 }
+                else
+                {
+                    Console.WriteLine("Thank you have a great day!");
+                }
+
+               
                 
             }
             else if (anwser.ToUpper() == "No".ToUpper())
@@ -42,7 +49,7 @@ namespace BankEncapsulation
             }
             else
             {
-                return;
+               // return;
             }
         }
     }
